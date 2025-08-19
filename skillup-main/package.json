@@ -1,0 +1,25 @@
+{
+  "name": "skillup",
+  "version": "1.0.0",
+  "description": "This section is under setup.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"npm start --prefix frontend\" \"npm run dev --prefix backend\" \"uvicorn main:app --reload --port 8000 --prefix python-service\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecloudops-tech/skillup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ecloudops-tech/skillup/issues"
+  },
+  "homepage": "https://github.com/ecloudops-tech/skillup#readme",
+  "dependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
