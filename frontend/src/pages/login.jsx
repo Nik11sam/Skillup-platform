@@ -16,7 +16,7 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/auth/login", form);
+      const res = await axios.post("https://skillup-backend-cq6x.onrender.com/api/auth/login", form);
       setToken(res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data));
       alert("Login successful!");
