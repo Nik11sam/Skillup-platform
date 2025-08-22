@@ -172,3 +172,4 @@ This project is for educational and demonstration purposes.
 ---
 
 **Built with ❤️ using React and modern web technologies**
+
