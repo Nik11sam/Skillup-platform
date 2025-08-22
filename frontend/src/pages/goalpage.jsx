@@ -31,7 +31,7 @@ const GoalPage = () => {
 
     const fetchGoals = async () => {
       try {
-        const response = await axios.get("/api/goals", config);
+        const response = await axios.get("https://skillup-backend-cq6x.onrender.com/api/goals", config);
         setGoals(response.data);
       } catch (error) {
         console.error("Failed to fetch goals:", error);
@@ -41,7 +41,7 @@ const GoalPage = () => {
 
     const fetchStats = async () => {
         try {
-            const response = await axios.get("/api/user/stats", config);
+            const response = await axios.get("https://skillup-backend-cq6x.onrender.com/api/user/stats", config);
             setUserStats(response.data);
         } catch (error) {
             console.error("Failed to fetch user stats:", error);
@@ -76,7 +76,7 @@ const GoalPage = () => {
         taskDescription: todayTask,
         hoursStudied: hours,
       };
-      const response = await axios.post(`/api/goals/${goalId}/checkin`, body, config);
+      const response = await axios.post(`https://skillup-backend-cq6x.onrender.com/api/goals/${goalId}/checkin`, body, config);
 
       alert(response.data.message);
 
