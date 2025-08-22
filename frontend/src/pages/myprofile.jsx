@@ -29,8 +29,8 @@ const ProfilePage = () => {
     try {
       console.log("Fetching essential data (stats, goals)...");
       const [statsRes, goalsRes] = await Promise.all([
-        axios.get("/api/user/stats", config),
-        axios.get("/api/goals", config)
+        axios.get("https://skillup-backend-cq6x.onrender.com/api/user/stats", config),
+        axios.get("https://skillup-backend-cq6x.onrender.com/api/goals", config)
       ]);
       setStats(statsRes.data);
       setGoals(goalsRes.data);
@@ -75,7 +75,7 @@ const ProfilePage = () => {
     try {
       const config = { headers: { Authorization: `Bearer ${token}` } };
       const body = { taskDescription: todayTask, hoursStudied: hours };
-      const response = await axios.post(`/api/goals/${goalId}/checkin`, body, config);
+      const response = await axios.post(`https://skillup-backend-cq6x.onrender.com/api/goals/${goalId}/checkin`, body, config);
 
       alert(response.data.message);
       setTodayTask('');
