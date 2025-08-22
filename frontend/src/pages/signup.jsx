@@ -20,7 +20,7 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/api/auth/register", form);
+      const response = await axios.post("https://skillup-backend-cq6x.onrender.com/api/auth/register", form);
       alert("Signup successful!");
 
       localStorage.setItem("token", response.data.token);
