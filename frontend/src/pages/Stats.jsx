@@ -16,7 +16,7 @@ const StatsPage = () => {
 
     const fetchStats = async () => {
         try {
-            const res = await axios.get("/api/user/stats", config);
+            const res = await axios.get("https://skillup-backend-cq6x.onrender.com/api/user/stats", config);
             setUserStats(res.data);
         } catch (err) {
             console.error("Failed to fetch user stats", err);
@@ -25,7 +25,7 @@ const StatsPage = () => {
 
     const fetchWeeklyXp = async () => {
         try {
-            const res = await axios.get("/api/user/weekly-xp", config);
+            const res = await axios.get("https://skillup-backend-cq6x.onrender.com/api/user/weekly-xp", config);
             setWeeklyXp(res.data);
         } catch (err) {
             console.error("Failed to fetch weekly XP data", err);
@@ -75,3 +75,4 @@ const StatsPage = () => {
 };
 
 export default StatsPage;
+
