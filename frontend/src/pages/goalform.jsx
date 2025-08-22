@@ -53,7 +53,7 @@ const GoalForm = () => {
         headers: { Authorization: `Bearer ${token}` },
       };
 
-      await axios.post("/api/goals", goalData, config);
+      await axios.post("https://skillup-backend-cq6x.onrender.com/api/goals", goalData, config);
 
       alert("Goal added successfully!");
       navigate("/myprofile");
