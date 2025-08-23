@@ -44,7 +44,7 @@ const ProfilePage = () => {
 
     if (user?._id) {
         try {
-            const pythonApiUrl = process.env.REACT_APP_PYTHON_API_URL || 'http://localhost:8000';
+            const pythonApiUrl = process.env.REACT_APP_PYTHON_API_URL ;
             console.log("Fetching suggestions...");
             const suggestionsRes = await axios.get(`${pythonApiUrl}/api/suggestions/${user._id}`, config);
             setSuggestions(suggestionsRes.data.suggestions || []);
