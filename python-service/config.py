@@ -8,7 +8,7 @@ load_dotenv()
 MONGO_URI = os.getenv('MONGO_URI', 'mongodb+srv://rejoycherian:EJ99qtdCPGmPxZZK@cluster-skillup.wbuz6am.mongodb.net/')
 SERVICE_PORT = int(os.getenv('PORT', os.getenv('SERVICE_PORT', 8000)))
 SERVICE_HOST = os.getenv('SERVICE_HOST', '0.0.0.0')
-NODE_BACKEND_URL = os.getenv('NODE_BACKEND_URL', 'http://localhost:5001')
+NODE_BACKEND_URL = os.getenv('https://skillup-backend-cq6x.onrender.com', 'http://localhost:5001')
 
 # Burnout thresholds
 BURNOUT_HIGH_THRESHOLD_DAYS = 7
@@ -27,3 +27,4 @@ logger = logging.getLogger(__name__)
 logger.info(f"Service running on {SERVICE_HOST}:{SERVICE_PORT}")
 logger.info(f"Node.js backend URL: {NODE_BACKEND_URL}")
 logger.info(f"MongoDB URI configured: {'Yes' if MONGO_URI else 'No'}")
+
